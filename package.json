@@ -1,0 +1,17 @@
+{
+  "name": "list-of-products",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/MAKUSref/list-of-products.git",
+  "author": "MAKUSref <tomaszmakowski002731@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
