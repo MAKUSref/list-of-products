@@ -1,11 +1,5 @@
-import _ from "lodash";
+import Dashboard from "./components/Dashboard";
+import 'normalize.css/normalize.css';
+import "./styles/style.scss";
 
-const component = () => {
-    const element = document.createElement("div");
-    
-    element.innerHTML = _.join(["Hello", "webpack", " "]);
-
-    return element;
-};
-
-document.body.appendChild(component());
+document.getElementById("root").appendChild(Dashboard());
