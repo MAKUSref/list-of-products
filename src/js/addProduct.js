@@ -17,6 +17,7 @@ const addProduct = (currentList) => {
         }
         
         $(".error-msg").removeClass("d-block");
+        $(".error-msg-pdf").addClass("d-none");
         $("#exampleModal").modal("hide");
         $("#exampleModal  input").val("");
 

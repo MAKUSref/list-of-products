@@ -64,12 +64,16 @@ class Dashboard {
     handleRemoveLi(id) {
         this.listItems = this.listItems.filter((option) => id != option.id);
         createList(this.listItems, this.handleRemoveLi, this.handleShowEditForm);
+        $(".download-pdf").off("click");
+        $(".download-pdf").click({list: this.listItems}, jsToPdf);
         this.saveToLocalStorage(); // save to local storage
     }
 
     handleAddProduct() {
         this.listItems = addProduct(this.listItems, this.handleRemoveLi, this.handleShowEditForm);
         createList(this.listItems, this.handleRemoveLi, this.handleShowEditForm);
+        $(".download-pdf").off("click");
+        $(".download-pdf").click({list: this.listItems}, jsToPdf);
         this.saveToLocalStorage(); // save to local storage
     }
 
