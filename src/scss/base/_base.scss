@@ -1,0 +1,22 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+}
+
+.container {
+    max-width: 900px !important;
+    margin: 0 auto;
+}
+
+.primary-color {
+    background-color: $primary-color;
+}
+
+// text
+.text-pr { color: $primary-color!important; }
+
+// shadows
+.shadow-1 { box-shadow: $shadow-1; }
+
+//cursor
+.cursor-pointer {cursor: pointer;}

@@ -1,5 +1,9 @@
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./js/Dashboard";
 import 'normalize.css/normalize.css';
-import "./styles/style.scss";
+import "./scss/style.scss";
+import "bootstrap";
+import '@fortawesome/fontawesome-free/js/all'
 
-document.getElementById("root").appendChild(Dashboard());
+const dashboard = new Dashboard();
+
+dashboard.init();
