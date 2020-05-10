@@ -2,6 +2,7 @@ import $ from "jquery";
 import addProduct from "./addProduct";
 import createList from "./createList";
 import editProduct from "./editProduct";
+import jsToPdf from "./jsToPdf";
 
 // const newProduct = {
 //     id: v1(),
@@ -97,6 +98,7 @@ class Dashboard {
         this.loadLocalStorage();
         createList(this.listItems, this.handleRemoveLi, this.handleShowEditForm);
         $(".add-product-btn").click(this.handleAddProduct);
+        $(".download-pdf").click({list: this.listItems}, jsToPdf);
     }
 };
 

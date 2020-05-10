@@ -20,3 +20,8 @@ body {
 
 //cursor
 .cursor-pointer {cursor: pointer;}
+
+.total-num {
+    font-size: $l-size;
+    color: rgba($color: #000000, $alpha: .525)
+}

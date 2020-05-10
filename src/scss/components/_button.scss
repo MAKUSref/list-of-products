@@ -6,3 +6,16 @@
     font-size: $s-size;
     border: 3px solid $primary-color;
 }
+
+.custom-button-secondary {
+    color: #fff;
+    background-color: $primary-color;
+    box-shadow: $shadow-1;
+    border-radius: 0;
+    border: 3px solid $primary-color;
+    font-size: $s-size;
+}
+
+.custom-button-secondary:hover {
+    color: #fff;
+}

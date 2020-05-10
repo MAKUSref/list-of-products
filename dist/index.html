@@ -9,288 +9,302 @@
 </head>
 
 <body>
-    <div class="navbar primary-color">
-        <div class="container">
-            <div>
-                <i class="fas fa-shopping-basket fa-2x text-light"></i>
-                <h3 class="mx-3 d-inline">Shop Assistant</h3>
-            </div>
-            <div>
-                <p class="m-0">Keep your shopping list always with you!</p>
+    <header>
+        <div class="navbar primary-color">
+            <div class="container">
+                <div>
+                    <i class="fas fa-shopping-basket fa-2x text-light"></i>
+                    <h3 class="mx-3 d-inline">Shop Assistant</h3>
+                </div>
+                <div>
+                    <p class="m-0">Keep your shopping list always with you!</p>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="main mt-4">
-        <div class="container">
+    <main id="main">
+        <div class="main mt-4">
+            <div class="container">
 
-            <section id="sum-section" class="shadow-1 p-2">
-                <h2 class="text-center mt-4">Summing up!</h2>
+                <section class="my-5">
+                    <h3 class="text-center my-3 d-flex justify-content-between align-items-center">
+                        <span>List of your products</span>
+                        <button class="btn custom-button py-2 px-3 d-flex justify-content-around align-items-center"
+                            data-toggle="modal" data-target="#exampleModal">
+                            <span>Add your product</span>
+                            <i class="fas fa-plus fa-1x text-pr ml-3"></i>
+                        </button>
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-drinksJuice" class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Drinks/juices</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-dairy" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Dairy</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-meat" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Meat</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-bread" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Bread</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-fruits" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Fruits</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-vegetables" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Vegetables</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-diapers" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Diapers</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 mt-2">
+                            <ul id="category-others" class="list-group">
+                                <li class="list-group-item  d-flex justify-content-between align-items-center active">
+                                    <span class="font-weight-bold">Others</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-                <div class="row my-3">
-                    <div class="col-md-4 d-flex align-items-center flex-column">
-                        <h4 class="h1 font-weight-normal mb-3">
-                            <i class="fas fa-weight-hanging text-pr"></i>
-                            <span class="d-inline-block count-up" data-from="0" data-to="100"
-                                data-time="2000">100</span>
-                        </h4>
-                        <p class="font-weight-normal text-muted">Total weight</p>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-center flex-column">
-                        <h4 class="h1 font-weight-normal mb-3">
-                            <i class="fas fa-tint text-pr"></i>
-                            <span class="d-inline-block count-up" data-from="0" data-to="100"
-                                data-time="2000">100</span>
-                        </h4>
-                        <p class="font-weight-normal text-muted">Total liquid</p>
-                    </div>
-                    <div class="col-md-4 d-flex align-items-center flex-column">
-                        <h4 class="h1 font-weight-normal mb-3">
-                            <i class="fas fa-boxes text-pr"></i>
-                            <span class="d-inline-block count-up" data-from="0" data-to="100"
-                                data-time="2000">100</span>
-                        </h4>
-                        <p class="font-weight-normal text-muted">Total pieces</p>
-                    </div>
-                </div>
-            </section>
+                <section id="sum-section" class="shadow-1 p-2">
+                    <h2 class="text-center mt-4">Summing up!</h2>
 
-            <section class="mt-5">
-                <h3 class="text-center my-3 d-flex justify-content-between align-items-center">
-                    <span>List of your products</span>
-                    <button class="btn custom-button py-2 px-3 d-flex justify-content-around align-items-center"
-                        data-toggle="modal" data-target="#exampleModal">
-                        <span>Add your product</span>
-                        <i class="fas fa-plus fa-1x text-pr ml-3"></i>
-                    </button>
-                </h3>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-drinksJuice" class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Drinks/juices</span>
-                            </li>
-                        </ul>
+                    <div class="row my-3">
+                        <div class="col-md-4 d-flex align-items-center flex-column">
+                            <h4 class="h1 font-weight-normal mb-3">
+                                <i class="fas fa-weight-hanging text-pr"></i>
+                                <span class="d-inline-block total-kilograms"></span>
+                            </h4>
+                            <p class="font-weight-normal text-muted">Total weight</p>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center flex-column">
+                            <h4 class="h1 font-weight-normal mb-3">
+                                <i class="fas fa-tint text-pr"></i>
+                                <span class="d-inline-block total-liters"></span>
+                            </h4>
+                            <p class="font-weight-normal text-muted">Total liquid</p>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center flex-column">
+                            <h4 class="h1 font-weight-normal mb-3">
+                                <i class="fas fa-boxes text-pr"></i>
+                                <span class="d-inline-block total-pieces"></span>
+                            </h4>
+                            <p class="font-weight-normal text-muted">Total pieces</p>
+                        </div>
                     </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-dairy" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Dairy</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-meat" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Meat</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-bread" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Bread</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-fruits" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Fruits</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-vegetables" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Vegetables</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-diapers" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Diapers</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12 mt-2">
-                        <ul id="category-others" class="list-group">
-                            <li class="list-group-item  d-flex justify-content-between align-items-center active">
-                                <span class="font-weight-bold">Others</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
-            <button class="btn custom-button mx-auto my-5 py-2 px-3 d-flex justify-content-around align-items-center">
-                <span>Download your products list</span>
-                <i class="fas fa-download fa-1x text-pr ml-3"></i>
-            </button>
+                    <hr class="mx-5" />
+
+                    <h4 class="text-center">Your current number of products in the list</h4>
+                    <p class="text-center total-num"></p>
+                </section>
+
+                <button
+                    class="btn download-pdf custom-button mx-auto my-5 py-2 px-3 d-flex justify-content-around align-items-center">
+                    <span>Download your products' list</span>
+                    <i class="fas fa-download fa-1x text-pr ml-3"></i>
+                </button>
+            </div>
         </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add your product to the list</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-
-                    <div class="form-group">
-                        <label for="productName">Name of product</label>
-                        <input type="text" class="form-control" id="productName" placeholder="Name of product" required
-                            value="">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add your product to the list</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="form-group">
-                        <label for="tpyeOfAmount">Type of amount</label>
+                    <div class="modal-body">
 
-                        <div class="d-flex justify-content-around">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="typeOfAmount" id="type-pieces"
-                                    data-value="pieces" value="pieces" checked>
-                                <label class="form-check-label" for="type-pieces">
-                                    pieces
-                                </label>
+                        <div class="form-group">
+                            <label for="productName">Name of product</label>
+                            <input type="text" class="form-control" id="productName" placeholder="Name of product"
+                                required value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="tpyeOfAmount">Type of amount</label>
+
+                            <div class="d-flex justify-content-around">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeOfAmount" id="type-pieces"
+                                        data-value="pieces" value="pieces" checked>
+                                    <label class="form-check-label" for="type-pieces">
+                                        pieces
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeOfAmount" id="type-liters"
+                                        data-value="liters" value="liters">
+                                    <label class="form-check-label" for="type-liters">
+                                        Liters
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeOfAmount" id="type-kilograms"
+                                        data-value="kilograms" value="kilograms">
+                                    <label class="form-check-label" for="type-kilograms">
+                                        Kilograms
+                                    </label>
+                                </div>
                             </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="typeOfAmount" id="type-liters"
-                                    data-value="liters" value="liters">
-                                <label class="form-check-label" for="type-liters">
-                                    Liters
-                                </label>
-                            </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="typeOfAmount" id="type-kilograms"
-                                    data-value="kilograms" value="kilograms">
-                                <label class="form-check-label" for="type-kilograms">
-                                    Kilograms
-                                </label>
-                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" name="amount" class="form-control" id="amount" placeholder="Amount"
+                                required value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" class="form-control">
+                                <option value="drinksJuice">Drinks/juices</option>
+                                <option value="dairy">Dairy</option>
+                                <option value="meat">Meat</option>
+                                <option value="bread">Bread</option>
+                                <option value="fruits">Fruits</option>
+                                <option value="vegetables">Vegetables</option>
+                                <option value="diapers">Diapers</option>
+                                <option value="others">Others</option>
+                            </select>
                         </div>
 
-
-
+                        <p class="text-danger error-msg font-weight-bold text-center d-none m-0">* You must fill every
+                            form
+                        </p>
                     </div>
-                    <div class="form-group">
-                        <label for="amount">Amount</label>
-                        <input type="number" name="amount" class="form-control" id="amount" placeholder="Amount"
-                            required value="">
+                    <div class="modal-footer">
+                        <button type="button" class="btn custom-button py-1" data-dismiss="modal">Close</button>
+                        <button type="button" class="add-product-btn btn custom-button-secondary py-1">Add
+                            product</button>
                     </div>
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <select id="category" name="category" class="form-control">
-                            <option value="drinksJuice">Drinks/juices</option>
-                            <option value="dairy">Dairy</option>
-                            <option value="meat">Meat</option>
-                            <option value="bread">Bread</option>
-                            <option value="fruits">Fruits</option>
-                            <option value="vegetables">Vegetables</option>
-                            <option value="diapers">Diapers</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </div>
-
-                    <p class="text-danger error-msg font-weight-bold text-center d-none">* You must fill every form
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="add-product-btn btn btn-success">Add product</button>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal -->
+        <!-- Modal -->
 
-    <!-- Edit Modal -->
-    <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit your product</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-
-                    <div class="form-group">
-                        <label for="productName">Name of product</label>
-                        <input type="text" class="form-control" id="productName--edit" placeholder="Name of product"
-                            required value="">
+        <!-- Edit Modal -->
+        <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit your product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="form-group">
-                        <label for="tpyeOfAmount">Type of amount</label>
+                    <div class="modal-body">
 
-                        <div class="d-flex justify-content-around">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="typeOfAmount--edit"
-                                    id="type-pieces--edit" data-value="pieces" value="pieces" checked>
-                                <label class="form-check-label" for="type-pieces--edit">
-                                    pieces
-                                </label>
+                        <div class="form-group">
+                            <label for="productName">Name of product</label>
+                            <input type="text" class="form-control" id="productName--edit" placeholder="Name of product"
+                                required value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="tpyeOfAmount">Type of amount</label>
+
+                            <div class="d-flex justify-content-around">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeOfAmount--edit"
+                                        id="type-pieces--edit" data-value="pieces" value="pieces" checked>
+                                    <label class="form-check-label" for="type-pieces--edit">
+                                        pieces
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeOfAmount--edit"
+                                        id="type-liters--edit" data-value="liters" value="liters">
+                                    <label class="form-check-label" for="type-liters--edit">
+                                        Liters
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeOfAmount--edit"
+                                        id="type-kilograms--edit" data-value="kilograms" value="kilograms">
+                                    <label class="form-check-label" for="type-kilograms--edit">
+                                        Kilograms
+                                    </label>
+                                </div>
                             </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="typeOfAmount--edit"
-                                    id="type-liters--edit" data-value="liters" value="liters">
-                                <label class="form-check-label" for="type-liters--edit">
-                                    Liters
-                                </label>
-                            </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="typeOfAmount--edit"
-                                    id="type-kilograms--edit" data-value="kilograms" value="kilograms">
-                                <label class="form-check-label" for="type-kilograms--edit">
-                                    Kilograms
-                                </label>
-                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" name="amount" class="form-control" id="amount--edit"
+                                placeholder="Amount" required value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category--edit" name="category--edit" class="form-control">
+                                <option value="drinksJuice">Drinks/juices</option>
+                                <option value="dairy">Dairy</option>
+                                <option value="meat">Meat</option>
+                                <option value="bread">Bread</option>
+                                <option value="fruits">Fruits</option>
+                                <option value="vegetables">Vegetables</option>
+                                <option value="diapers">Diapers</option>
+                                <option value="others">Others</option>
+                            </select>
                         </div>
 
-
-
+                        <p class="text-danger error-msg font-weight-bold text-center d-none m-0">* You must fill every
+                            form
+                        </p>
                     </div>
-                    <div class="form-group">
-                        <label for="amount">Amount</label>
-                        <input type="number" name="amount" class="form-control" id="amount--edit" placeholder="Amount"
-                            required value="">
+                    <div class="modal-footer">
+                        <button type="button" class="btn custom-button py-1" data-dismiss="modal">Close</button>
+                        <button type="button" class="edit-product-btn btn custom-button-secondary py-1">Edit</button>
                     </div>
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <select id="category--edit" name="category--edit" class="form-control">
-                            <option value="drinksJuice">Drinks/juices</option>
-                            <option value="dairy">Dairy</option>
-                            <option value="meat">Meat</option>
-                            <option value="bread">Bread</option>
-                            <option value="fruits">Fruits</option>
-                            <option value="vegetables">Vegetables</option>
-                            <option value="diapers">Diapers</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </div>
-
-                    <p class="text-danger error-msg font-weight-bold text-center d-none">* You must fill every form
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="edit-product-btn btn btn-success">Edit</button>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Edit Modal -->
+        <!-- Edit Modal -->
+    </main>
+
+
+
 
     <script src="main.js"></script>
 </body>
